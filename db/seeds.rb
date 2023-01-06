@@ -4,8 +4,7 @@ puts 'Creating 10 new properties...'
     name: "#{%w[Beautiful Lovely Bright Amazing Cozy Comfortable Modern
                 Nice].sample} #{%w[House Home Cottage Lodge Chateau Regency Villa Studio Bungalow Barn
                                    Loft].sample}",
-    units: "#{["kitchen", "bathroom", "bedroom", "living-room"].sample}"
-  )
+    units: "#{["kitchen", "bathroom", "bedroom", "living-room"].sample}")
 end
 
 puts 'Finished!'

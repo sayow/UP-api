@@ -11,7 +11,7 @@ module Api
 
       # POST /properties
       def create
-        @property = Property.create(property_params).to_a
+        @property = Property.units.create(property_params).to_a
         if @property.save
           render json: @property
         else
@@ -33,7 +33,7 @@ module Api
       private
 
       def property_params
-        params.require(:property).permit(:name, :units)
+        params.require(:property).permit(:name, unit_attributes: [:id, :units])
       end
     end
   end
