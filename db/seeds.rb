@@ -1,10 +1,11 @@
-
 puts 'Creating 10 new properties...'
 10.times do
-  property = Property.create(
-    name:  "#{["Beautifu", "Lovely", "Bright", "Amazing", "Cozy", "Comfortable", "Modern", "Nice"].sample} #{["House", "Home", "Cottage", "Lodge", "Chateau", "Regency", "Villa", "Studio", "Bungalow", "Barn", "Loft"].sample}"
-    units: "#{}"
+  property = Property.find_or_create_by!(
+    name: "#{%w[Beautiful Lovely Bright Amazing Cozy Comfortable Modern
+                Nice].sample} #{%w[House Home Cottage Lodge Chateau Regency Villa Studio Bungalow Barn
+                                   Loft].sample}",
+    units: "#{["kitchen", "bathroom", "bedroom", "living-room"].sample}"
   )
-  restaurant.save!
 end
+
 puts 'Finished!'
